@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/crud.css">
+</head>
+<body>
+    
+    <div  class="container mt-5">
+        <h1 class="text-center mb-4 "> Employee system Management</h1>
+
+        <!-- form for employee -->
+        <form id="employee-form" class="mb-4">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="employee-name"> Emp Name</label>
+                    <input type="text" id="employee-name" class="form-control" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="employee-position"> Emp position</label>
+                    <input type="text" id="employee-position" class="form-control" placeholder="Enter Position" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="employee-hireDate"> Hire Date</label>
+                    <input type="date" id="employee-hireDate" class="form-control" placeholder="Enter Hire date" required>
+                </div>
+            </div>
+            <input type="hidden" id="editing-index">
+            <button type="submit" id="submit-btn" class="btn btn-primary"> Add Employee</button>
+        </form>
+
+        <!--employee--> 
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th >ID</th>
+                        <th >EmpName</th>
+                        <th >Position</th>
+                        <th >Hire Date</th>
+                        <th >Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-list">
+                   
+                </tbody>
+            </table>        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <script src="./../js/crud.js"></script>
+</body>
+</html>
